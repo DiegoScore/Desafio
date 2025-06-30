@@ -1,0 +1,17 @@
+services:
+  bertopic:
+    build: .
+    container_name: bertopic_gpu
+    volumes:
+      - .:/Desafio
+    working_dir: /Desafio
+    command: jupyter notebook --ip=0.0.0.0 --port=8080 --allow-root --NotebookApp.token=''
+    ports:
+      - "8080:8080"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]

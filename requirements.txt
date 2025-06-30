@@ -1,0 +1,13 @@
+pandas
+scikit-learn
+matplotlib
+plotly
+wordcloud
+spacy
+bertopic[all]
+notebook
+openpyxl
+numpy==1.26.4
+sentence-transformers
+umap-learn
+hdbscan
